@@ -1,0 +1,11 @@
+<div ng-show="ctrl.showUndo" style="position:fixed;width:100%;background-color:#fff;border-bottom:1px solid #ddd;padding:10px;text-align:center;">
+	<button class="btn" ng-click="ctrl.undo()">Annuler ?</button>
+</div>
+<ul class="list-group">
+    <li ng-repeat="word in ctrl.words track by $index" class="list-group-item">
+        <a ng-href="/#/play/{{word.id}}">{{word.id}}  : 
+            {{word.word|starify}} <small>{{word.word}}</small>
+        </a>
+        <span class="glyphicon glyphicon-remove pull-right"  ng-click="ctrl.remove(word.id)"></span>
+    </li>
+</ul>

@@ -1,0 +1,9 @@
+<form name="ctrl.newWordForm" novalidate ng-submit="ctrl.add()">
+	<input name="word" ng-model="ctrl.word.word" placeholder="Mot" required>
+	<br>
+	<input name="email" type="email" ng-model="ctrl.word.email" placeholder="Email">
+	<br>
+	<button class="btn" type="submit">Enregistrer</button>
+	<br>
+	<button class="btn" type="button" ng-click="ctrl.addRandom()">Random</button>
+</form>
